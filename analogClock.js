@@ -117,6 +117,6 @@ const stopAlarm = () => {
     alert("Alarm stopped");
     window.location.reload();
   } else {
-    alert("First set an ALARM");
+    alert("First set an ALARM then STOP the ALARM");
   }
 };
