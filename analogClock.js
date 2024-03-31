@@ -108,15 +108,15 @@ const stopAlarm = () => {
   const alarmSetTo = document.getElementById("alarmSetTo");
   const alarmTimeInput = document.getElementById("timeInput");
 
-
+  if (alarmTimeout) {
     alarmSound.pause();
     alarmTimeInput.value = "";
     alarmSetTo.innerHTML = `Alarm set for ${alarmTimeInput.value}`;
     alarmSuccess.innerHTML = "";
 
-
-    alert('Alarm stopped');
+    alert("Alarm stopped");
     window.location.reload();
-  
+  } else {
+    alert("First set an ALARM");
+  }
 };
-
