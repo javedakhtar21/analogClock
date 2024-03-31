@@ -119,4 +119,4 @@ const stopAlarm = () => {
   } else {
     alert("First set an ALARM then STOP the ALARM...");
   }
-};
+}
