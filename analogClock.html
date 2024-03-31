@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analog clock</title>
+  <link rel="stylesheet" href="analogClock.css">
+</head>
+
+<body>
+  <div id="heading-cont">
+    <h2>Analog clock with alarm feature</h2>
+  </div>
+  <div class="main-cont">
+    
+    <div class="clock-circle">
+      <div class="date-cont">
+        <h5 id="dateLabel"></h5>
+      </div>
+      <div class="time-cont">
+        <h5 id="timeLabel">12:50</h5>
+      </div>
+      <div class="dot"></div>
+      <span style="--value:1"><b>1</b></span>
+      <span style="--value:2"><b>2</b></span>
+      <span style="--value:3"><b>3</b></span>
+      <span style="--value:4"><b>4</b></span>
+      <span style="--value:5"><b>5</b></span>
+      <span style="--value:6"><b>6</b></span>
+      <span style="--value:7"><b>7</b></span>
+      <span style="--value:8"><b>8</b></span>
+      <span style="--value:9"><b>9</b></span>
+      <span style="--value:10"><b>10</b></span>
+      <span style="--value:11"><b>11</b></span>
+      <span style="--value:12"><b>12</b></span>
+
+      <div style='--color:black;--h:70px' id="hour-hand" class="hand-cont"><b></b></div>
+      <div style='--color:blue;--h:90px' id="minute-hand" class="hand-cont"><b></b></div>
+      <div style='--color:red;--h:110px' id="second-hand" class="hand-cont"><b></b></div>
+    </div>
+
+    <div class="alarm-set-cont">
+      <h2>Select time for the alarm</h2>
+      <input type="time" id="timeInput">
+      <button id="btnSetAlarm" onclick="setAlarm()">Set Alarm</button>
+      <button id="btnStopAlarm" onclick="stopAlarm()">Stop Alarm</button>
+      <audio id="alarmSound" src="alarm-ring.mp3" loop></audio>
+    </div>
+
+    <div class="alarm-status-cont">
+      <h2>Alarm Status</h2>
+      <h3 id="alarmSetTo">Alarm set to</h3>
+      <h3 id="alarmSuccess"></h3>
+    </div>
+  </div>
+
+  <script src="analogClock.js"></script>
+</body>
+
+</html>

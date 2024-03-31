@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background-color: rgb(229, 231, 231);
+}
+#heading-cont {
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.main-cont {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.clock-circle {
+  height: 300px;
+  background-color: white;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 23;
+}
+.clock-circle span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--value)));
+  inset: 5px;
+  text-align: center;
+}
+.clock-circle span b {
+  transform: rotate(calc(-30deg * var(--value)));
+  display: inline-block;
+}
+.hand-cont {
+  top: 52%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.hand-cont b {
+  position: absolute;
+  width: 4px;
+  height: var(--h);
+  background-color: var(--color);
+}
+
+.date-cont {
+  position: absolute;
+  top: 47%;
+  left: 56%;
+  background-color: rgb(211, 206, 206);
+  padding: 2px 4px;
+}
+.date-cont h5 {
+  margin: 0;
+}
+.time-cont {
+  position: absolute;
+  top: 47%;
+  left: 9%;
+  background-color: rgb(211, 206, 206);
+  padding: 2px 4px;
+}
+.time-cont h5 {
+  margin: 0;
+}
+/* Style for custom time input */
+.alarm-set-cont,
+.alarm-status-cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(122, 120, 120);
+  padding: 20px;
+  width: 280px;
+  height: 300px;
+}
+
+.alarm-set-cont::before {
+  content: "\23F0"; /* Unicode character for clock */
+  position: absolute;
+  top: 43%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #555;
+}
+
+.alarm-set-cont input[type="time"] {
+  padding: 5px 30px; /* Adjust padding to accommodate icon */
+  font-size: 16px;
+  border: 2px solid #91f775; /* Yellow border */
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 220px;
+}
+
+.alarm-set-cont input[type="time"]:focus {
+  border-color: #198406; /* Orange border when focused */
+}
+
+/* Style for button */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #1ab714; /* Orange background */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgb(13, 116, 13); /* Lighter shade of orange on hover */
+}
+
+#btnStopAlarm {
+  background-color: rgb(231, 72, 72);
+}
+#btnStopAlarm:hover {
+  background-color: rgb(176, 10, 10);
+}
+
